@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Created with Cambalache 0.90.2 -->
+<interface>
+  <!-- interface-name ui_file.ui -->
+  <requires lib="gtk" version="4.12"/>
+  <template class="window" parent="GtkApplicationWindow">
+    <property name="default-height">60</property>
+    <property name="default-width">450</property>
+    <property name="title">pyt_gtk4_colordialog</property>
+    <child>
+      <object class="GtkButton">
+        <property name="label">Gtk.ColorDialogの表示</property>
+        <property name="margin-bottom">20</property>
+        <property name="margin-end">20</property>
+        <property name="margin-start">20</property>
+        <property name="margin-top">20</property>
+        <signal name="clicked" handler="on_button_clicked"/>
+      </object>
+    </child>
+  </template>
+  <object class="GtkColorDialog" id="colordialog">
+    <property name="title">色の選択</property>
+    <property name="with-alpha">False</property>
+  </object>
+</interface>
